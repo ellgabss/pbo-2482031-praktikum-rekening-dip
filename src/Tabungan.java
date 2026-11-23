@@ -1,4 +1,4 @@
-public class Tabungan extends Rekening implements BerBunga {
+public class Tabungan extends Rekening implements BerBunga, BisaDitarik {
     private double bungaPersen;
 
     public Tabungan(String nomor, String pemilik, int saldo, double bungaPersen) {
@@ -12,6 +12,14 @@ public class Tabungan extends Rekening implements BerBunga {
         return bunga;
     }
 
+    public boolean tarik(int jumlah) {
+        if (jumlah <= 0 || jumlah > this.saldo) {
+            return false;
+        }
+        this.saldo -= jumlah;
+        return true;
+    }
+
     public int biayaAdminBulanan() {
         return this.saldo >= 1000000 ? 0 : 5000;
     }
@@ -20,3 +28,4 @@ public class Tabungan extends Rekening implements BerBunga {
         return "Tabungan, bunga " + this.bungaPersen + "% per bulan";
     }
 }
+

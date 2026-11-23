@@ -30,15 +30,6 @@ public abstract class Rekening {
         }
     }
 
-    public boolean tarik(int jumlah) {
-        if (jumlah > 0 && jumlah <= this.saldo) {
-            this.saldo -= jumlah;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public abstract int biayaAdminBulanan();
 
     public abstract String keterangan();

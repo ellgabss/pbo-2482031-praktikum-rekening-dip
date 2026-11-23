@@ -1,4 +1,4 @@
-public class Giro extends Rekening {
+public class Giro extends Rekening implements BisaDitarik {
     private int batasOverdraft;
 
     public Giro(String nomor, String pemilik, int saldo, int batasOverdraft) {

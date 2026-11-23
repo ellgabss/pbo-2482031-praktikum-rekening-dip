@@ -16,10 +16,6 @@ public class Deposito extends Rekening implements BerBunga {
         return 0;
     }
 
-    public boolean tarik(int jumlah) {
-        return false;
-    }
-
     public String keterangan() {
         return "Deposito, bunga " + this.bungaPersen + "% per bulan";
     }

@@ -21,14 +21,13 @@ public class ProsesAkhirBulan {
 
     }
 
-    public static void autodebet(Rekening[] semua, int jumlah) {
-        for(Rekening rek : semua) {
+    public void autodebet(BisaDitarik[] semua, int jumlah) {
+        for (BisaDitarik rek : semua) {
             boolean berhasil = rek.tarik(jumlah);
             String hasil = berhasil ? Rekening.formatRupiah(jumlah) : "gagal";
             PrintStream var10000 = System.out;
             String var10001 = rek.getNomor();
             var10000.println(var10001 + " autodebet    : " + hasil);
         }
-
     }
 }
