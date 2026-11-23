@@ -7,6 +7,11 @@ public class BankSolid {
         Rekening[] semua = new Rekening[]{ani, citra, budi, dewi};
         BerBunga[] berbunga = { ani, citra, dewi };
         BisaDitarik[] bisaDitarik = { ani, citra, budi };
+        //Uji ISP : BisaDitarik[] salah = { ani, dewi };
+        //java: incompatible types: Deposito cannot be converted to BisaDitarik
+        //Notifikasi notifikasi = new SmsNotifikasi();
+        // UJI DIP: ganti Email ke SMS hanya mengubah 1 baris (baris ini).
+        // ProsesAkhirBulan tidak diubah sama sekali (0 baris).
         Notifikasi notifikasi = new EmailNotifikasi();
         ProsesAkhirBulan proses = new ProsesAkhirBulan(notifikasi);
         LaporanBank.cetakDaftar("REKENING AWAL", semua);
